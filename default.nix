@@ -8,7 +8,7 @@ rustPlatform.buildRustPackage rec {
     owner = "Aras14HD";
     repo = pname;
     rev = version;
-    hash = lib.fakeHash;
+    hash = "sha256-Ib310d+kkN6kXXESJJmOgufuz3p1BOZrOuJYbDBdA6Y=";
   };
 
   cargoLock = {
