@@ -39,6 +39,9 @@ fn main() {
                 {
                     (total, time, typ)
                 }
+                _ if time.signed_duration_since(last_time) > Duration::hours(2) => {
+                    (total + Duration::minutes(10), time, typ)
+                }
                 _ => (total + time.signed_duration_since(last_time), time, typ),
             },
         )
