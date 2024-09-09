@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, rustPlatform }:
+{ pkgs ? import <nixpkgs> {},lib ? pkgs.stdenv.lib, fetchFromGitHub ? pkgs.fetchFromGithub, rustPlatform ? pkgs.rustPlatform }:
 
 rustPlatform.buildRustPackage rec {
   pname = "devshell-timelog";
