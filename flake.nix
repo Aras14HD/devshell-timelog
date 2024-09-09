@@ -6,7 +6,7 @@
   outputs = { self, nixpkgs, flake-utils, ...}: flake-utils.lib.eachDefaultSystem (system:
     let pkgs = nixpkgs.legacyPackages.${system};
     in {
-      defaultPackage = pkgs.callPackage ./default.nix {};
+      lib.timelog = pkgs.callPackage ./default.nix {};
 
       devShell = pkgs.mkShell {
         packages = with pkgs; [
